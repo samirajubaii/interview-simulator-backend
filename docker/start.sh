@@ -3,7 +3,10 @@ set -e
 
 cd /var/www
 
-# Generate app key if not set
+# Generate .env from environment variables
+cp .env.example .env
+
+# Override with actual environment values
 php artisan key:generate --force
 
 # Run migrations
