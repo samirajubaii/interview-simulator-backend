@@ -20,7 +20,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Copy config files
-COPY docker/nginx.conf /etc/nginx/sites-available/default
+COPY docker/nginx/default.conf /etc/nginx/sites-available/default
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/start.sh /start.sh
 
